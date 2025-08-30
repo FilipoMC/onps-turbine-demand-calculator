@@ -3,9 +3,9 @@ use std::cmp;
 use crate::constants;
 
 pub fn calc_turbine_demand(demand: u32) -> u32 {
-    let demand = cmp::min(demand + 24, constants::MAX_DEMAND);
+    let optimal_demand = cmp::min(demand + constants::MOE, constants::MAX_DEMAND);
 
-    demand / 2
+    optimal_demand / 2
 }
 
 #[cfg(test)]

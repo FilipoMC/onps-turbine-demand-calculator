@@ -5,7 +5,7 @@ use std::io;
 use crate::constants;
 use crate::logic;
 
-pub enum InputResult<T> {
+enum InputResult<T> {
     Valid(T),
     Invalid,
     Quit,
